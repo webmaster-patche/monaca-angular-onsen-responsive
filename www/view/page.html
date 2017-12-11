@@ -1,0 +1,21 @@
+<ons-page ng-controller="PageAppController as app" ons-show="app.title = 'Page'">
+    <ons-navigator var="appNavigator" page="page.html"></ons-navigator>
+
+    <ons-toolbar>
+        <div class="center">My App - {{app.title}}</div>
+    </ons-toolbar>
+
+    <ons-toolbar>
+        <div class="left"><ons-back-button>Back</ons-back-button></div>
+        <div class="center">Master</div>
+    </ons-toolbar>
+</ons-page>
+
+<ons-template page="page.html">
+    <ons-page>
+    <div class="content" style="text-align: center">
+        <p>Page 2 content</p>
+        <p>HageHage</p>
+    </div>
+    </ons-page>
+</ons-template>
