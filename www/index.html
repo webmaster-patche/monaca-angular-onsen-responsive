@@ -91,26 +91,32 @@
     // sub controller
     app
         .controller('PageAppController', function($scope, Avengers) {
+        });
     app
         .controller('HogeAppController', function($scope, Avengers) {
             $scope.avengers = Avengers;
-    });
+        });
+    app
+        .controller('SampleAppController', function($scope, Avengers) {
+            $scope.avengers = Avengers;
+            var Form = {};
+            Form.name = "";
+            $scope.Form = Form;
+        });
     // ready
-    ons
-        .ready(function() {
-            console.log("Onsen UI is ready!");
+    ons.ready(function() {
+        console.log("Onsen UI is ready!");
     });
   </script>
 </head>
 <body>
-
     <ons-page ng-controller="MainAppController">
         <!-- Tab is root navigator. -->
         <ons-tabbar position="bottom">
-            <ons-tab page="view/page.html" label="Page" icon="home" active></ons-tab>
-            <ons-tab page="view/hoge.html" label="Hoge" icon="user"></ons-tab>
+            <ons-tab page="view/page-navigator.html" label="Page" icon="home" active></ons-tab>
+            <ons-tab page="view/hoge-navigator.html" label="Hoge" icon="user"></ons-tab>
+            <ons-tab page="view/sample-navigator.html" label="Sample" icon="github"></ons-tab>
         </ons-tabbar>
     </ons-page>
-
 </body>
 </html>
