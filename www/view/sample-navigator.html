@@ -119,19 +119,22 @@
 
         <ons-template id="page6.html">
           <ons-page>
-              <div class="left">
-                <ons-back-button>Back</ons-back-button>
-              </div>
-              <div class="right" style="padding-right: 6px">
-                <ons-button modifier="light" onclick="app.sample.nav.pushPage('page7.html', { animation : 'fade' } )">上肢</ons-button>
-                <ons-button modifier="light" onclick="app.sample.nav.pushPage('page8.html', { animation : 'fade' } )">下肢</ons-button>
-              </div>
+                <ons-toolbar>
+                    <div class="left">
+                        <ons-back-button>Back</ons-back-button>
+                    </div>
+                    <div class="center">Form</div>
+                    <div class="right" style="padding-right: 6px">
+                        <ons-button modifier="light" onclick="app.sample.nav.pushPage('page7.html', { animation : 'fade' } )">上肢</ons-button>
+                        <ons-button modifier="light" onclick="app.sample.nav.pushPage('page8.html', { animation : 'fade' } )">下肢</ons-button>
+                    </div>
+                </ons-toolbar>
         
             <form name="" action="">
             <div style="text-align: center">
                 What is Selected? {{app.Form.name}}
                 <br />
-                <input type="text" name="name" value="{{app.Form.name}}" autocomplete="入力してください" />
+                <input type="text" name="name" value="{{app.Form.name}}" placeholder="入力してください" />
             </div>
             </form>
           </ons-page>
@@ -144,15 +147,13 @@
                         <ons-back-button>Back</ons-back-button>
                     </div>
                     <div class="center">Title</div>
-                    <div class="right" style="line-height: 44px">
-                    Right
-                    </div>
+                    <div class="right" style="line-height: 44px">Right</div>
                 </ons-toolbar>
             
                 <div style="text-align: center">
                     <table>
-                        <ul ng-repeat="cast in avengers.cast" ng-click="app.Form.name=cast.name; app.sample.nav.popPage();">
-                            <li style="display:inline-block;width:150px;border: solid 1px #000;">
+                        <ul ng-repeat="cast in avengers.cast" ng-click="app.Form.name=cast.name;">
+                            <li style="display:inline-block;width:150px;border: solid 1px #000;" onclick="app.sample.nav.popPage();">
                                 {{cast.name}}
                                 <br />
                                 {{cast.character}}
@@ -170,9 +171,7 @@
                         <ons-back-button>Back</ons-back-button>
                     </div>
                     <div class="center">Title</div>
-                    <div class="right" style="line-height: 44px">
-                    Right
-                    </div>
+                    <div class="right" style="line-height: 44px">Right</div>
                 </ons-toolbar>
 
                 <div style="text-align: center">
